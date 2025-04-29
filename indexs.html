@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mindanao Peace Journey</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Front Page -->
+  <div id="frontPage" class="front-page">
+    <h1>Welcome to the Reading in Philippine History</h1>
+    <p id="section">Section: <strong>ACT AD 1</strong></p>
+    <p id="name">Name: <strong>Aljon V. Reyes</strong></p>
+    <p id="subject">Subject: <strong>Reading in Philippine History</strong></p>
+    <p id="historicalText">This journey will take us through significant peace treaties between the Philippine government and Muslim Filipinos. Discover the path of peace!</p>
+    <button id="startBtn" class="continue-button" onclick="startJourney()">Start Journey</button>
+  </div>
+
+  <!-- Curtains -->
+  <div class="curtain left-curtain"></div>
+  <div class="curtain right-curtain"></div>
+
+  <!-- Sparkles -->
+  <div class="sparkles" id="sparkles"></div>
+
+  <!-- Main Content -->
+  <div class="main-frame" id="mainFrame">
+    <!-- Speech Section -->
+    <div class="speech" id="speech">
+      <h1>Welcome, Traveler!</h1>
+      <p>I am <strong>Aljon V. Reyes</strong>, your magical guide.</p>
+      <p>Let us embark on the journey of peace treaties!</p>
+    </div>
+
+    <!-- Topic Section -->
+    <div class="panel" id="contentPanel">
+      <div class="panel-header" id="topicTitle"></div>
+      <div class="panel-body" id="topicContent"></div>
+      <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeTopic(-1)">Previous</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeTopic(1)">Next</button>
+      </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="quiz" id="quizSection">
+      <h2>Quiz Time!</h2>
+      <div id="quizQuestion"></div>
+      <div id="quizOptions"></div>
+      <button class="continue-button" id="nextQuizBtn" onclick="nextQuiz()">Next Question</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

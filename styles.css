@@ -1,0 +1,255 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Cardo', serif;
+  background: linear-gradient(#f0e4d7, #bfa88e);
+  overflow-x: hidden;
+}
+
+/* Front Page */
+.front-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #5b3924;
+  text-align: center;
+  background: url('images/old-paper.jpg') center/cover no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease;
+  padding: 20px;
+}
+
+.front-page h1 {
+  font-size: 3em;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 20px;
+  color: #8b4513;
+}
+
+.front-page p {
+  font-size: 1.4em;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.front-page p strong {
+  color: #8b0000;
+}
+
+#startBtn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #8b0000;
+  color: #fff8dc;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#startBtn:hover {
+  background: #a52a2a;
+}
+
+/* Curtains */
+.curtain {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #7a0000;
+  z-index: 5;
+  transition: transform 2s ease-in-out;
+}
+
+.left-curtain {
+  left: 0;
+  transform: translateX(0);
+}
+
+.right-curtain {
+  right: 0;
+  transform: translateX(0);
+}
+
+.curtain.open.left-curtain {
+  transform: translateX(-100%);
+}
+
+.curtain.open.right-curtain {
+  transform: translateX(100%);
+}
+
+/* Main Frame */
+.main-frame {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+/* Speech Section */
+/* Speech Section - Updated to match Panel */
+.speech {
+  opacity: 1; /* Always visible */
+  transition: opacity 2s ease-in;
+  font-family: 'Cinzel', serif; /* Same font family as the panel */
+  text-align: center;
+  background: rgba(255, 248, 220, 0.95); /* Light beige background */
+  color: #5b3924; /* Dark Brown text */
+  text-shadow: none; /* No shadow effect for the speech text */
+  border-radius: 15px; /* Rounded corners for the box */
+  padding: 30px; /* Padding inside the box */
+  margin: 40px auto; /* Center the box and add margin */
+  max-width: 800px; /* Box width constraint */
+  box-shadow: 0 0 15px #8b4513; /* Brown shadow around the box */
+}
+
+.speech h1 {
+  font-size: 2em; /* Font size matches the panel header */
+  margin-bottom: 15px;
+  font-family: 'Cinzel', serif; /* Same font family as the panel */
+  color: #5b3924; /* Dark Brown for heading */
+  text-transform: none; /* Remove text-transform */
+  letter-spacing: 0; /* No letter-spacing */
+  text-shadow: none; /* No shadow effect for the heading */
+}
+
+.speech p {
+  font-size: 1.2em; /* Matches the panel's paragraph font */
+  line-height: 1.6; /* Same line-height as the panel */
+  font-family: 'Arial', sans-serif; /* Same font as the panel */
+  color: #6d4c41; /* Medium Brown for paragraph text */
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Same shadow as the panel */
+}
+
+.speech p strong {
+  font-weight: bold;
+  color: #5b3924; /* Dark Brown for strong text */
+}
+
+/* Topic Panel (unchanged) */
+.panel {
+  background: rgba(255, 248, 220, 0.95);
+  color: #5b3924;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 0 15px #8b4513;
+}
+
+.panel-header {
+  font-size: 2em; /* Same font size as the speech heading */
+  font-family: 'Cinzel', serif; /* Same font family as the speech */
+}
+
+.panel-body {
+  font-size: 1.2em; /* Same font size as the speech paragraphs */
+  line-height: 1.6; /* Same line-height as the speech paragraphs */
+}
+
+.panel-header {
+  font-size: 2em;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 20px;
+}
+
+.panel-body {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+/* Navigation */
+.navigation {
+  margin-top: 20px;
+}
+
+.nav-btn {
+  padding: 12px 25px;
+  background: #8b0000;
+  color: #fff8dc;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #a52a2a;
+}
+
+/* Quiz Section */
+.quiz {
+  display: none;
+  text-align: center;
+  background: rgba(255, 248, 220, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  color: #5b3924;
+  max-width: 700px;
+  margin: 50px auto;
+  box-shadow: 0 0 15px #8b4513;
+}
+
+.quiz h2 {
+  font-size: 2.5em;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 20px;
+}
+
+.quiz button {
+  padding: 12px 25px;
+  background: #8b0000;
+  color: #fff8dc;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s ease;
+}
+
+.quiz button:hover {
+  background: #a52a2a;
+}
+
+/* Sparkles */
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sparkle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 50%;
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-10px) scale(1.5); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.8; }
+}
